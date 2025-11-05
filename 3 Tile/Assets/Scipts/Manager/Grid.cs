@@ -23,7 +23,7 @@ public class Grid : MonoBehaviour
         Gizmos.color = Color.gray;
 
         // Số ô hiển thị quanh gốc
-        int gridExtent = 5;
+        int gridExtent = 4;
 
         for (int x = -gridExtent; x <= gridExtent; x++)
         {
