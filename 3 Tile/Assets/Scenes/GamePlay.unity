@@ -203,7 +203,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 155, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201948598
 MonoBehaviour:
@@ -493,6 +493,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa582e167c376a43a1fafe82812e355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickSprites:
+  - {fileID: 21300000, guid: 87ab7527a918a6046acc48c82246ef21, type: 3}
+  - {fileID: 21300000, guid: c19dae536b380d647be5c0e9222f6588, type: 3}
+  - {fileID: 21300000, guid: a97e71595d80c9548aed678d528556f1, type: 3}
+  - {fileID: 21300000, guid: cd0669bf8b2fd154ab43b2d925fbb307, type: 3}
+  - {fileID: 21300000, guid: f17c62dc5c459674d914869d312ee39c, type: 3}
+  - {fileID: 21300000, guid: 609f51343375ac842b96bfb0e6db8756, type: 3}
+  - {fileID: 21300000, guid: 9669e94476561b649a9139f7ebb81242, type: 3}
+  - {fileID: 21300000, guid: 9f5fdffb392c4c94f934d67134bfd71d, type: 3}
+  - {fileID: 21300000, guid: 2739d492fde735048aa6811f4a49061e, type: 3}
+  - {fileID: 21300000, guid: 7f69895ca7d6b8d44bc1c5f0a740ed4e, type: 3}
+  - {fileID: 21300000, guid: d02b6762284f4b84aa6c951dbfbbc0f4, type: 3}
+  - {fileID: 21300000, guid: 94c4aff972f15954e84192f04847a77e, type: 3}
+  - {fileID: 21300000, guid: 9fe2a9295bbf6314a96004dee34026cf, type: 3}
+  - {fileID: 21300000, guid: 9cb613b3c216c67489a71ef2dc08299f, type: 3}
+  - {fileID: 21300000, guid: 9e5f5a2f3c5ad5544a1a4abc24898725, type: 3}
   BrickBase: {fileID: 0}
 --- !u!4 &630610845
 Transform:

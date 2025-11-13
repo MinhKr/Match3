@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BrickBase : MonoBehaviour
@@ -7,11 +8,13 @@ public class BrickBase : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
     private bool isSelected = false;
+
     private static int brickCountInSlot = 0;
     private static float slotY = -3f;
-    private static float slotSpacing = 1.2f;
-
+    private static float slotSpacing = 0.7f;
     private static int maxSlot = 7;
+
+    private static List<BrickBase> fallenBricks = new List<BrickBase>();
 
     public void Init(Vector2Int pos, Sprite sprite)
     {
@@ -32,7 +35,7 @@ public class BrickBase : MonoBehaviour
     {
         if (isSelected) return;
 
-        if(brickCountInSlot >= maxSlot)
+        if (brickCountInSlot >= maxSlot)
         {
             Debug.Log("Slot is full!");
             return;
@@ -44,9 +47,10 @@ public class BrickBase : MonoBehaviour
 
     private void MoveToSlot()
     {
-        //calcu the position in the slot
-        Vector3 targetPosition = new Vector3(brickCountInSlot * slotSpacing, slotY, 0);
+        //calculate the position in the slot
+        Vector3 targetPosition = new Vector3((brickCountInSlot * slotSpacing) - 2, slotY, 0);
         brickCountInSlot++;
+        fallenBricks.Add(this);
 
         StartCoroutine(MoveSmooth(targetPosition));
     }
@@ -64,5 +68,18 @@ public class BrickBase : MonoBehaviour
         }
 
         transform.position = target;
+    }
+
+    public static void ResetAllSlot()
+    {
+        Debug.Log("Resetting all fallen bricks in slot.");
+        foreach (var brick in fallenBricks)
+        {
+            if (brick != null)
+                Destroy(brick.gameObject);
+        }
+
+        fallenBricks.Clear();
+        brickCountInSlot = 0;
     }
 }

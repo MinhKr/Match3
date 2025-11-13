@@ -24,6 +24,14 @@ public class GridManager : MonoBehaviour
     {
         GenerateGrid();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            BrickBase.ResetAllSlot();
+        }
+    }
     private void GenerateGrid()
     {
         if (grid == null || brickPrefab == null)
@@ -40,9 +48,14 @@ public class GridManager : MonoBehaviour
                 GameObject brickObj = Instantiate(brickPrefab, worldPos, Quaternion.identity, transform);
 
                 BrickBase brick = brickObj.GetComponent<BrickBase>();
-                brick.Init(new Vector2Int(x, y), null); // chưa cần sprite
+                brick.Init(new Vector2Int(x, y), PrefabStorage.instance.GetBrickSprite());//Random icon when init
             }
         }
+
+        // Center the grid
+        Vector3 offset = new Vector3(-width / 2f + 0.5f, -height / 4f + 0.5f, 0);
+        transform.position = offset;
+
 
         Debug.Log($"Đã sinh {width * height} viên gạch.");
     }

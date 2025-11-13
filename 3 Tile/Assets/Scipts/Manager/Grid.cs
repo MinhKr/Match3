@@ -30,12 +30,12 @@ public class Grid : MonoBehaviour
             for (int y = -gridExtent; y <= gridExtent; y++)
             {
                 Vector3 point = GetNearestPoint(new Vector3(x, y));
-                Gizmos.DrawWireCube(point, Vector3.one * 0.95f);
+                Gizmos.DrawWireCube(point, Vector3.one * 0.5f);
             }
         }
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(transform.position, Vector3.one * 1.2f);
+        Gizmos.DrawWireCube(transform.position, Vector3.one * 0.5f);
     }
 #endif
 
