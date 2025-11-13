@@ -16,10 +16,23 @@ public class BrickBase : MonoBehaviour
 
     private static List<BrickBase> fallenBricks = new List<BrickBase>();
 
-    public void Init(Vector2Int pos, Sprite sprite)
+    public void Init(Vector2Int pos, Sprite icon)
     {
         gridPosition = pos;
-        _spriteRenderer.sprite = sprite;
+
+        if (_spriteRenderer == null)
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+
+        //Set the icon
+        if (icon != null)
+        {
+            _spriteRenderer.sprite = icon;
+        }
+        else
+        {
+            Sprite randomIcon = PrefabStorage.instance.GetBrickIcon();
+            _spriteRenderer.sprite = randomIcon;
+        }
     }
 
 #if UNITY_EDITOR

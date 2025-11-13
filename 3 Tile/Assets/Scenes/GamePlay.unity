@@ -202,8 +202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 155, y: 540}
+  m_AnchoredPosition: {x: 0.0095215, y: 0.0027466}
+  m_SizeDelta: {x: 267.4, y: 838.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201948598
 MonoBehaviour:
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa582e167c376a43a1fafe82812e355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickSprites:
+  brickIcons:
   - {fileID: 21300000, guid: 87ab7527a918a6046acc48c82246ef21, type: 3}
   - {fileID: 21300000, guid: c19dae536b380d647be5c0e9222f6588, type: 3}
   - {fileID: 21300000, guid: a97e71595d80c9548aed678d528556f1, type: 3}
@@ -573,10 +573,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

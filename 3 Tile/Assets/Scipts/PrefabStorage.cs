@@ -5,10 +5,10 @@ public class PrefabStorage : MonoBehaviour
     public static PrefabStorage instance { get; private set; }
 
     [Header("Brick Sprites")]
-    public Sprite[] brickSprites;
+    public Sprite[] brickIcons;
 
     public BrickBase BrickBase;
-    
+
     private void Awake()
     {
         if (instance == null)
@@ -17,15 +17,15 @@ public class PrefabStorage : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public Sprite GetBrickSprite()
+    public Sprite GetBrickIcon()
     {
-        if (brickSprites == null || brickSprites.Length <= 0)
+        if (brickIcons == null || brickIcons.Length <= 0)
         {
             Debug.LogWarning("Prefab Storage don't have any sprites");
             return null;
         }
 
-        int index = Random.Range(0, brickSprites.Length);
-        return brickSprites[index];
+        int index = Random.Range(0, brickIcons.Length);
+        return brickIcons[index];
     }
 }

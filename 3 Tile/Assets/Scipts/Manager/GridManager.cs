@@ -48,7 +48,7 @@ public class GridManager : MonoBehaviour
                 GameObject brickObj = Instantiate(brickPrefab, worldPos, Quaternion.identity, transform);
 
                 BrickBase brick = brickObj.GetComponent<BrickBase>();
-                brick.Init(new Vector2Int(x, y), PrefabStorage.instance.GetBrickSprite());//Random icon when init
+                brick.Init(new Vector2Int(x, y), PrefabStorage.instance.GetBrickIcon());//Random icon when init
             }
         }
 
